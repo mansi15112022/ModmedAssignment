@@ -7,9 +7,9 @@ public class AssignmentRomaniaADV {
 	public static void main(String[] args) {
 		int sum;
 		Scanner sc = new Scanner(System.in);
-		int[] number = new int[5];
+		int[] number = new int[1];
 
-		for (int i = 0; i < 5; i++) {
+		for (int i = 0; i < 1; i++) {
 			number[i] = sc.nextInt();
 		}
 
@@ -88,7 +88,9 @@ public class AssignmentRomaniaADV {
 				System.out.println("Invalid date");
 			} else if ((month == 02) && (day > 29)) {
 				System.out.println("Invalid date");
-			} else {
+			} else if ((month == 02) && (((birthYear)%4)!=0) && (day == 29)) {
+				System.out.println("Invalid date");
+			}else {
 				System.out.println("Day of birth is " + day);
 			}
 
